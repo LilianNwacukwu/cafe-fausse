@@ -1,0 +1,72 @@
+/* General container */
+.home-container {
+  padding: 80px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  min-height: 100vh;
+}
+
+/* Title */
+.home-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #b85c38;
+}
+
+/* Subtitle */
+.home-subtitle {
+  font-size: 22px;
+  margin-bottom: 50px;
+  color: #555;
+}
+
+/* Newsletter section */
+.newsletter {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff4e6;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Newsletter heading */
+.newsletter h2 {
+  margin-bottom: 20px;
+  color: #b85c38;
+}
+
+/* Form inputs */
+.newsletter-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.message {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #b85c38;
+}
+
+
+/* Subscribe button */
+.newsletter-form button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #b85c38;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #923f20;
+}

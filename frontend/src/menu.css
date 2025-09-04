@@ -1,0 +1,19 @@
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.menu-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,120 @@
+/* App.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container for pages */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #c59d5f; /* golden accent */
+}
+
+/* Page title styling */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Flexbox layout for sections */
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Cards for menu, gallery, or reservations */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1 1 250px; /* responsive width */
+  text-align: center;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, select, textarea, button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  background-color: #c59d5f;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #a67c3c;
+}
+
+/* Footer / Newsletter */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flex-section {
+    flex-direction: column;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
