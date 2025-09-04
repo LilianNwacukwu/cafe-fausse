@@ -23,57 +23,92 @@ The application uses **React** for the frontend, **Flask** for the backend, and 
 - **AI Tools:** Used AI-assisted development to speed up coding and ensure clean architecture
 
 ## Installation and Running Locally
-1. **Clone the repository**
-```bash
-git clone https://github.com/LilianNwacukwu/cafe-fausse.git
-cd cafe-fausse
+# Café Fausse Web Application
 
-Backend Setup
+**Author:** Lilian Chimaobi Nwacukwu  
+**Email:** lilydiamond100@gmail.com  
+
+## Overview
+Café Fausse is a fine-dining restaurant web application built using **React** (frontend) and **Flask + PostgreSQL** (backend). The site provides a modern and elegant user interface, allowing customers to:
+
+- View the restaurant menu
+- Make table reservations
+- Sign up for a newsletter
+- Explore a photo gallery
+- Learn about the restaurant via an “About Us” page
+
+This project demonstrates a complete **full-stack application** with working backend logic and database integration.
+
+---
+
+## Features
+1. **Home Page:**  
+   - Welcome message  
+   - Newsletter subscription form with duplicate email handling  
+
+2. **Menu Page:**  
+   - Categorized menu items  
+
+3. **Reservations Page:**  
+   - Form for booking tables  
+   - Handles guest count, time slots, and table assignment  
+   - Validates availability  
+
+4. **About Page:**  
+   - Information about the restaurant and owners  
+
+5. **Gallery Page:**  
+   - Displays images of dishes and restaurant ambiance  
+
+---
+
+## Tech Stack
+- **Frontend:** React, JSX, CSS  
+- **Backend:** Python, Flask, Flask-CORS  
+- **Database:** PostgreSQL  
+
+---
+
+## Installation / Running Locally
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/LilianNwacukwu/cafe-fausse.git
+   cd cafe-fausse
+
+
+2.Backend setup
 
 cd backend
 python -m venv venv
-venv\Scripts\activate       # Windows
+venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 python app.py
 
+3.Frontend setup
 
-Frontend Setup
-
-cd frontend
+cd ../frontend
 npm install
 npm start
 
 
-Open your browser at http://localhost:3000 to access the site.
+4.Visit the app
+Open your browser and go to http://localhost:3000.
 
-Database Setup
+AI Tools Used
 
-Customers Table: Stores subscriber and reservation customer info.
+Used AI-assisted coding to generate boilerplate React components.
 
-Reservations Table: Stores reservation details including table number, time, and guests.
-
-Ensure PostgreSQL is running and the database cafe_fausse exists before running the app.
-
-Usage
-
-Users can navigate between Home, Menu, Reservations, About, and Gallery pages.
-
-Users can subscribe to the newsletter, which is validated to prevent duplicate emails.
-
-Users can make a reservation, which is validated against table availability.
-
-Admin or developer can view database contents via PostgreSQL.
-
-Author
-
-Name: Lilian Chimaobi Nwacukwu
-
-Email: lilydiamond100@gmail.com
-
-GitHub: LilianNwacukwu
+Used AI to help structure the backend API and integrate PostgreSQL logic.
 
 Notes
 
-The project was developed following Quantic's Web Application & Interface Design requirements.
+Ensure PostgreSQL is running locally and the database cafe_fausse exists.
 
-AI tools were used to assist in code generation and UI improvements.
+Newsletter and reservation forms validate inputs and handle duplicates.
+
+The app uses CORS to allow frontend-backend communication.
+
+License
+
+This project is for academic purposes and was submitted as part of Quantic’s Web Application & Interface Design course.
