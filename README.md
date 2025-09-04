@@ -1,28 +1,3 @@
-# Café Fausse - Web Application & Interface Design Project
-
-## Overview
-Café Fausse is an elegant fine-dining restaurant. This project is a full-stack web application built as part of my MSSE program at Quantic. The website was developed to provide an online presence for the restaurant, including menu display, reservations, and newsletter signups.
-
-The application uses **React** for the frontend, **Flask** for the backend, and **PostgreSQL** as the database.
-
-## Features
-- **Home Page:** Welcome message, restaurant description, and newsletter signup form.
-- **Menu Page:** Displays menu items by category.
-- **Reservations Page:** Allows customers to make table reservations, specifying date, time, and number of guests.
-- **About Page:** Introduces the restaurant owners and story.
-- **Gallery Page:** Showcases photos of the restaurant and dishes.
-- **Newsletter Signup:** Validates unique emails and stores subscriber information in the database.
-- **Reservation System:** Assigns available tables and prevents overbooking.
-- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
-
-## Technologies Used
-- **Frontend:** React, JSX, CSS, Flexbox/Grid
-- **Backend:** Flask, Python, Flask-CORS
-- **Database:** PostgreSQL
-- **API Requests:** Axios
-- **AI Tools:** Used AI-assisted development to speed up coding and ensure clean architecture
-
-## Installation and Running Locally
 # Café Fausse Web Application
 
 **Author:** Lilian Chimaobi Nwacukwu  
@@ -69,15 +44,54 @@ This project demonstrates a complete **full-stack application** with working bac
 
 ---
 
-## Installation / Running Locally
+## Database Setup
+The application uses **PostgreSQL** with the following tables:
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/LilianNwacukwu/cafe-fausse.git
-   cd cafe-fausse
+### Customers
+| Column             | Type        | Notes                        |
+|-------------------|------------|-------------------------------|
+| id                 | SERIAL     | Primary Key                  |
+| name               | VARCHAR(100)| Customer full name           |
+| email              | VARCHAR(100)| Unique email for login/newsletter |
+| phone              | VARCHAR(20) | Customer phone number        |
+| newsletter_signup  | BOOLEAN    | Default FALSE                |
+
+### Reservations
+| Column      | Type       | Notes                              |
+|------------|-----------|-----------------------------------|
+| id          | SERIAL    | Primary Key                        |
+| customer_id | INT       | Foreign key referencing Customers(id) |
+| time_slot   | TIMESTAMP | Date and time of reservation      |
+| table_number| INT       | Assigned table number             |
+| guests      | INT       | Number of guests                  |
+
+**Example SQL commands:**
+```sql
+CREATE TABLE Customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    phone VARCHAR(20),
+    newsletter_signup BOOLEAN DEFAULT FALSE
+);
+
+CREATE TABLE Reservations (
+    id SERIAL PRIMARY KEY,
+    customer_id INT REFERENCES Customers(id),
+    time_slot TIMESTAMP,
+    table_number INT,
+    guests INT
+);
+
+Installation / Running Locally
+
+Clone the repository
+
+git clone https://github.com/LilianNwacukwu/cafe-fausse.git
+cd cafe-fausse
 
 
-2.Backend setup
+Backend setup
 
 cd backend
 python -m venv venv
@@ -85,14 +99,15 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 python app.py
 
-3.Frontend setup
+
+Frontend setup
 
 cd ../frontend
 npm install
 npm start
 
 
-4.Visit the app
+Visit the app
 Open your browser and go to http://localhost:3000.
 
 AI Tools Used
@@ -112,3 +127,5 @@ The app uses CORS to allow frontend-backend communication.
 License
 
 This project is for academic purposes and was submitted as part of Quantic’s Web Application & Interface Design course.
+
+
